@@ -1,0 +1,31 @@
+---
+---
+
+
+<a id="song_link" class="container">
+    <img id="song_cover" style="margin: 10px; border-radius: 10px;" height="128" width="128"/>
+    <div class="np_data">
+        <h4 id="song_noworlast">Last played</h4>
+        <h3><b id="song_title">Last.fm is loading</b></h3>
+        <h5 id="song_album">Last.fm is loading</h5>
+        <h4 id="song_artist">Last.fm is loading</h4>
+    </div>
+</a>
+
+<script>
+const apiKey = "a5b7b04fa4ed74446ad0f88d3b6f42d6"
+
+const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=moltenisfrozen&api_key=${apiKey}&nowplaying="true"&limit=1&format=json`)
+const data = await response.json()
+const np = data.recenttracks.track[0]
+console.log(np)
+
+document.getElementById("song_noworlast").innerHTML= np["@attr"]?.nowplaying ? "Now Playing: " : "Last Played"
+
+document.querySelector("#song_link").setAttribute("href", np.url) 
+document.querySelector("#song_title").innerHTML = np.name
+document.querySelector("#song_artist").innerHTML = np.artist["#text"]
+document.querySelector("#song_album").innerHTML = np.album["#text"]
+document.querySelector("#song_cover").setAttribute("src", np.image[2]["#text"])
+document.querySelector("#song_cover").setAttribute("alt", `Album cover of ${np.album["#text"]} by ${np.artist["#text"]}`)
+</script>

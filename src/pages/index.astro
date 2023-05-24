@@ -1,0 +1,42 @@
+---
+import '../styles/global.css'
+import Navigation from '../components/Navigation.astro'
+import PostBox from '../components/PostBox.astro';
+import LastFM from '../components/LastFM.astro';
+const posts = await Astro.glob("./posts/*.md")
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content= {Astro.generator} >
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		<title>Michał's Blog</title>
+	</head>
+	<body>
+		<Navigation></Navigation>
+		<div class="content-container">
+			<div class="header">
+				<h1>Hi, i'm <i>Michał</i></h1>
+				<p>And this is the site where i pour my creative power into sometimes.<br>
+					I am a high school student in Poland, majoring in Maths & Physics & Biology (for now).
+				</p>
+			</div> 
+			<div class="container">
+				{posts.map((post) => (
+					<PostBox title={post.frontmatter.title}
+					imageUrl={post.frontmatter.image.url}
+					path={post.url}
+					description={post.frontmatter.description} />
+				))}
+			</div>
+			<LastFM />
+			
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,9 @@
+---
+const { title, imageUrl, path, description } = Astro.props
+---
+
+<a href={path} class="box"
+style={`background-image: url("${imageUrl}");  background-size: 100%;`}>
+    <h2>{title}</h1>
+    <p>{description}</p>
+</a>
