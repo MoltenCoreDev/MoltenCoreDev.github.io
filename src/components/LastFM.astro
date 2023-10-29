@@ -18,7 +18,6 @@ const apiKey = "a5b7b04fa4ed74446ad0f88d3b6f42d6"
 const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=moltenisfrozen&api_key=${apiKey}&nowplaying="true"&limit=1&format=json`)
 const data = await response.json()
 const np = data.recenttracks.track[0]
-console.log(np)
 
 document.getElementById("song_noworlast").innerHTML= np["@attr"]?.nowplaying ? "Now Playing: " : "Last Played"
 

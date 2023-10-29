@@ -1,32 +1,63 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import '../styles/global.css'
+import "../styles/global.css";
 ---
 
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content= {Astro.generator} >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>About Michał</title>
-</head>
-<body>
-    <Navigation />
-    <div class="content-container">
-        <div class="container np_data">
-            <h1>Hi i'm Michał,</h1>
-            <p>I'm a high school student from Poland, majoring in Physics, Maths & Biology (for now).<br></p>
-            <p>I am interested in music - I play the guitar, know a bit of music theory and hope to release some originals soon ;)</p>
-            <p>I also like programming and electronics.</p>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+            rel="stylesheet"
+        />
+        <title>About Michał</title>
+    </head>
+    <body>
+        <Navigation />
+        <div class="content-container">
+            <div class="container np_data">
+                <h1>Hi i'm Michał,</h1>
+                <p>
+                    I'm a high school student from Poland, majoring in Physics,
+                    Maths & Biology (for now).<br />
+                </p>
+                <p>
+                    I am interested in music - I play & learn the guitar,
+                    put up <b>some synth and guitar music on my soundcloud</b>!
+                </p>
+            </div>
+            <div class="container np_data">
+                <h1>Socials:</h1>
+                <div class="socials">
+                    <a class="social" href="https://github.com/MoltenCoreDev"
+                        ><img
+                            src="/github-mark.svg"
+                            width="64"
+                            height="64"
+                        /><h2>MoltenCoreDev</h2></a
+                    >
+                    <a class="social" href="https://soundcloud.com/moltenisfrozen">
+                        <img src="https://d21buns5ku92am.cloudfront.net/26628/images/419679-1x1_SoundCloudLogo_cloudmark-f5912b-original-1645807040.jpg" width="64" height="64" style="border-radius: 25px;"/><h2>
+                            moltenisfrozen
+                        </h2></a
+                    >
+                    <a class="social" href="https://discordapp.com/users/430466586558726181">
+                        <img src="/discord-mark-black.svg" width="64" height="64"/><h2>
+                            moltenfrozen
+                        </h2></a
+                    >
+                    <a class="social" href="https://frozencore.itch.io/">
+                        <img src="/itchio-black.svg" width="64" height="64"/><h2>
+                            frozencore
+                        </h2></a
+                    >
+                </div>
+            </div>
         </div>
-        <div class="container np_data">
-            <h1>Socials:</h1>
-            <a class="social" href="https://github.com/MoltenCoreDev"><img src="/github-mark.svg" width="64" height="64" /><h2>MoltenCoreDev</h2></a>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

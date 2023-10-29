@@ -69,10 +69,23 @@ body {
     background-color: var(--button1);
 }
 
+.social > * {
+    margin: 3px;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+}
+.socials > * {
+    margin: 5px;
+}
+
 .np_data {
     display: flex;
     flex-direction: column;
 }
+
 .np_data > * {
     margin-top: 10px;
     margin-bottom: 0px;
