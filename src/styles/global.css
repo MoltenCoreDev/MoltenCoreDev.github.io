@@ -24,6 +24,10 @@
     font-family: 'Cozette', sans-serif;
 }
 
+img {
+    image-rendering: pixelated;
+}
+
 a {
     text-decoration: none;
     color: var(--primary);
