@@ -1,0 +1,30 @@
+---
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css";
+import MiniButton from "../components/MiniButton.astro";
+import HeadContent from '../components/HeadContent.astro';
+---
+
+<html lang="en">
+    <HeadContent title="Michał's friends"/>
+    <body>
+        <Navigation />
+        <div class="content-container">
+            <div class="container np_data">
+                <h1>Friends</h1>
+                <p>
+                    One of the most important thing in life, internet or not a friend is a friend.<br>
+                    <i><acc>Hug all your friends, and let them know, you're not letting go</acc> - Cavetown</i>
+                </p>
+            </div>
+            <div class="container np_data">
+                <MiniButton href="https://alyxia.dev" src="/88x31/alyxia.png" alt="88x31 image with alyxia written in cyan on a black background with stars"></MiniButton>
+            </div>
+            <div class="container np_data">
+                <p>You are not on here and you are my friend? or want to be? <a href="/about" class="link">Message me!</a> so i can put you on the list.</p>
+                <p>Want to add me on your site? Feel free to do so! Here is my own 88x31 tag.</p>
+                <MiniButton href="https://moltencoredev.github.io" src="/88x31/me.png" alt="88x31 image with the caption molten is frozen styled to the words. A green sign saying go next to it, pointing to a happy console creature called AB-1."></MiniButton>
+            </div>
+        </div>
+    </body>
+</html>

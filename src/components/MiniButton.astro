@@ -1,0 +1,8 @@
+---
+// MiniButton is just 88x31 because js doesn't like variables made of only numbers
+const { src, href, alt } = Astro.props
+---
+
+<a href={href} target="_blank" rel="nofollow noopener">
+    <img src={src} width=88 height="31" alt={alt}>
+</a>
