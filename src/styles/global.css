@@ -88,11 +88,11 @@ body {
 .friend-list > a {
     display: flex;
     margin: 5px;
+    transition: .2s all;
 }
 
-.friend-list > a:hover {
-    scale: 150%;
-    margin: 10px;
+.friend-box:hover {
+    transform: translateY(-2px);
 }
 
 .social {
