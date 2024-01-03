@@ -80,6 +80,21 @@ body {
     padding: 5px;
 }
 
+.friend-box {
+    display: flex;
+    width: min-content;
+}
+
+.friend-list > a {
+    display: flex;
+    margin: 5px;
+}
+
+.friend-list > a:hover {
+    scale: 150%;
+    margin: 10px;
+}
+
 .social {
     background-color: var(--button2);
     /* border-radius: 5px; */
