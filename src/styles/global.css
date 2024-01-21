@@ -7,14 +7,6 @@
     --link: #1d3d6d;
 }
 
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
-
 @font-face {
     font-family: Cozette;
     src: url("/fonts/CozetteVector.ttf");
@@ -131,6 +123,13 @@ body {
     margin-bottom: 0px;
 }
 
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
@@ -203,7 +202,7 @@ body {
 }
 
 acc {
-    color: var(--accent);
+    color: var(--accent) !important;
 }
 
 .header {
