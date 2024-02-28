@@ -1,0 +1,33 @@
+---
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css";
+import PostBox from "../components/PostBox.astro"
+import HeadContent from '../components/HeadContent.astro';
+---
+
+<html lang="en">
+    <HeadContent title="Portfolio"/>
+    <body>
+        <Navigation></Navigation>
+        <div class="content-container">
+            <div class="container np_data">
+                <h1>Games</h1>
+                <div class="container">
+                    <PostBox title="ElementalRift" description="FPS shooter inspired by ULTRAKILL. WIP. Made in godot"/>
+                    <PostBox title="extrinsic" description="FPS shooter inspired by ULTRAKILL. Made in godot" href="https://frozencore.itch.io/extrinsic" imageUrl=""/>
+                     
+                </div>
+            </div>
+            <div class="container np_data">
+                <h1>Music</h1>
+                <div class="container">
+                    <PostBox title="Get In" description="As described by my friends, your GTA heist has been succesful music." href="https://soundcloud.com/moltenisfrozen/get-in"/>                     
+                </div>
+
+            </div>
+            <div class="container">
+                Other
+            </div>
+        </div>
+    </body>
+</html>

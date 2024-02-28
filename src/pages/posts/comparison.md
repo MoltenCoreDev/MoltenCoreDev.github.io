@@ -5,8 +5,7 @@ description: "impostor syndrome"
 date: 2023-03-11
 author: "Michał"
 image:
-    url: "/images/comparison.jpg"
-    alt: "My github logo"
+    alt: ""
 categories: ["philosophy", "mentality", "motivation"]
 ---
 

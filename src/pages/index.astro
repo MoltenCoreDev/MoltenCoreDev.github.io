@@ -2,6 +2,7 @@
 import '../styles/global.css'
 import HeadContent from '../components/HeadContent.astro';
 import Navigation from '../components/Navigation.astro'
+import MiniButton from "../components/MiniButton.astro";
 import PostBox from '../components/PostBox.astro';
 import LastFM from '../components/LastFM.astro';
 const posts = await Astro.glob("./posts/*.md")
@@ -15,14 +16,14 @@ const posts = await Astro.glob("./posts/*.md")
 			<div class="header">
 				<h1>Hi, i'm <i><acc>Michał</acc></i></h1>
 				<p>And you are right here on my site!<br>
-					I am a high school student in Poland, majoring in Maths & Physics.
+					I'm glad you found it, take a look around, listen to stuff, read stuff, play stuff!
 				</p>
 			</div> 
 			<div class="container">
 				{posts.map((post) => (
 					<PostBox title={post.frontmatter.title}
 					imageUrl={post.frontmatter.image.url}
-					path={post.url}
+					href={post.url}
 					description={post.frontmatter.description} />
 				))}
 			</div>

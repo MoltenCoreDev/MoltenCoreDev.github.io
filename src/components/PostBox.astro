@@ -1,8 +1,7 @@
 ---
-const { title, imageUrl, path, description } = Astro.props
+const { title, imageUrl, href, description } = Astro.props
 ---
-<!-- style={`background-image: url("${imageUrl}");  background-size: 100%;`} -->
-<a href={path} class="box post-box">
+<a href={href} class:list={["box", "post-box"]} style={imageUrl ? 'background-image: url("' + imageUrl + '");  background-size: 100%;' : ""}>
     <h2>{title}</h1>
     <p>{description}</p>
 </a>

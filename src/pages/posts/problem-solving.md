@@ -5,8 +5,7 @@ description: ""
 date:   2023-01-16
 author: "Michał"
 image:
-    url: "https://avatars.githubusercontent.com/u/54597045?s=40&v=4"
-    alt: "My github logo"
+    alt: ""
 tags: ["coding", "IT", "web"]
 ---
 # What is the essence of programming?
