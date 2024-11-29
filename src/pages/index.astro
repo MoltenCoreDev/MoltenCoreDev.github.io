@@ -1,35 +1,33 @@
 ---
-import '../styles/global.css'
-import HeadContent from '../components/HeadContent.astro';
-import Navigation from '../components/Navigation.astro'
+import "../styles/global.css";
+import HeadContent from "../components/HeadContent.astro";
+import Navigation from "../components/Navigation.astro";
 import MiniButton from "../components/MiniButton.astro";
-import PostBox from '../components/PostBox.astro';
-import LastFM from '../components/LastFM.astro';
+import PostBox from "../components/PostBox.astro";
+import LastFM from "../components/LastFM.astro";
 //const posts = await Astro.glob("./posts/*.md*")
 ---
 
 <html lang="en">
-	<HeadContent title="Michał's Blog"/>
+	<HeadContent title="Michał's Blog" />
 	<body>
-		<Navigation></Navigation>
-		<div class="content-container">
-			<div class="header">
-				<h1>Hi, i'm <i><acc>Michał</acc></i></h1>
-				<p>And you are right here on my site!<br>
-					I'm glad you found it, take a look around, listen to stuff, read stuff, play stuff!
-				</p>
-			</div> 
-			<!-- <div class="container">
-				{posts.map((post) => (
-					<PostBox title={post.frontmatter.title}
-					imageUrl={post.frontmatter.image.url}
-					href={post.url}
-					description={post.frontmatter.description} />
-				))}
-			</div> -->
-			<LastFM />
-			
+		<div class="page-container">
+			<div class="navigation-container">
+				<div><a href="#" class="home-text hover-underline-animation left text-transition">mihao.pl</a></div>
+				<div class="navbar">
+					<a href="#" class="hover-underline-animation left">Work</a>
+					<a href="#" class="hover-underline-animation left">About Me</a>
+					<a href="#" class="hover-underline-animation left">Contact</a>
+				</div>
+			</div>
+
+			<div class="flipper-container">
+				<a class="flipper-icon"><img src="/icons/chevron_backward.svg"></a>
+				<div class="flipper-center">
+					<h1 class="bokor">Elemental Rift</h1>
+				</div>
+				<a class="flipper-icon"><img src="/icons/chevron_forward.svg"></a>
+			</div>
 		</div>
-		
 	</body>
 </html>
