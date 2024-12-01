@@ -1,33 +1,29 @@
 ---
 import "../styles/global.css";
 import HeadContent from "../components/HeadContent.astro";
-import Navigation from "../components/Navigation.astro";
-import MiniButton from "../components/MiniButton.astro";
-import PostBox from "../components/PostBox.astro";
-import LastFM from "../components/LastFM.astro";
+import Flipper from "../components/Flipper.astro";
+import SideBar from "../components/SideBar.astro"
+import Header from "../components/Header.astro";
 //const posts = await Astro.glob("./posts/*.md*")
 ---
 
 <html lang="en">
-	<HeadContent title="Michał's Blog" />
+	<HeadContent title="mihao.pl" />
 	<body>
+		<div id="page-thinner">
+		<Header page=""/>
+		<div class="sidebar-divider">
 		<div class="page-container">
-			<div class="navigation-container">
-				<div><a href="#" class="home-text hover-underline-animation left text-transition">mihao.pl</a></div>
-				<div class="navbar">
-					<a href="#" class="hover-underline-animation left">Work</a>
-					<a href="#" class="hover-underline-animation left">About Me</a>
-					<a href="#" class="hover-underline-animation left">Contact</a>
-				</div>
-			</div>
-
-			<div class="flipper-container">
-				<a class="flipper-icon"><img src="/icons/chevron_backward.svg"></a>
-				<div class="flipper-center">
-					<h1 class="bokor">Elemental Rift</h1>
-				</div>
-				<a class="flipper-icon"><img src="/icons/chevron_forward.svg"></a>
-			</div>
+			<h1>Hi! I'm Mihao</h1>
+			<h2>I make <acc>games</acc>! I make <acc>music</acc> for them! I make the 3d models!<br/>
+			Well... That's a bit of stuff. But the best part is <acc>creating</acc> in general!<br/>
+			I love taking the lead role on a project and I always try to make the most of the resources I have!</h2>
+			<div class="divider"/>
+			<h1>Some of my work:</h1>
+			<Flipper header="ElementalRift" content="Game"/>
 		</div>
+		<SideBar current={0}/>
+	</div>
+</div>
 	</body>
 </html>

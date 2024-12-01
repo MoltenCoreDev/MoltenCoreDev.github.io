@@ -1,15 +1,28 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
 import PostBox from "../components/PostBox.astro"
+import SideBar from "../components/SideBar.astro";
+import Header from "../components/Header.astro";
 import HeadContent from '../components/HeadContent.astro';
 ---
 
 <html lang="en">
     <HeadContent title="Portfolio"/>
     <body>
-        <Navigation></Navigation>
-        <div class="content-container">
+        <div id="page-thinner">
+            <Header page="work"/>
+            <div class="sidebar-divider">
+            <div class="page-container">
+                <h1>Hi! I'm Mihao</h1>
+                <h2>I make <acc>games</acc>! I make <acc>music</acc> for them! I make the 3d models!<br/>
+                Well... That's a bit of stuff. But the best part is <acc>creating</acc> in general!<br/>
+                I love taking the lead role on a project and I always try to make the most of the resources I have!</h2>
+                <div class="divider"/>
+                <h1>Some of my work:</h1>
+            </div>
+            <SideBar current={1}/>
+        </div>
+        <!-- <div class="content-container">
             <div class="container np_data">
                 <h1>Games</h1>
                 <div class="container">

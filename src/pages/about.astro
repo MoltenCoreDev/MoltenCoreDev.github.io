@@ -1,56 +1,24 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
+import SideBar from "../components/SideBar.astro";
 import HeadContent from '../components/HeadContent.astro';
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
     <HeadContent title="About Michał"/>
     <body>
-        <Navigation />
-        <div class="content-container">
-            <div class="container np_data">
-                <h1>Hi i'm Michał,</h1>
-                <p>
-                    I'm a high school student from Poland, not any more interesting than that.<br />
-                </p>
-            </div>
-            <div class="container np_data">
-                <h1>Contact me here!</h1>
-                <div class="socials">
-                <a class="social" href="https://discordapp.com/users/430466586558726181">
-                    <img src="/logos/discord.svg" width="64" height="64"/><h2>
-                        moltenfrozen
-                    </h2></a>
-                <a class="social" href="mailto:molters.tv@gmail.com">
-                    <img src="/icons/mail.svg" width="64" height="64">
-                    <h2>molters.tv@gmail.com</h2>
-                </a>
-            </div>
-        </div>
-            <div class="container np_data">
-                <h1>Find me here!</h1>
-                <div class="socials">
-                    <a class="social" href="https://github.com/MoltenCoreDev"><img
-                            src="/logos/github.svg"
-                            width="64"
-                            height="64"
-                        /><h2>MoltenCoreDev</h2></a
-                    >
-                    <a class="social" href="https://soundcloud.com/moltenisfrozen">
-                        <img src="/logos/soundcloud.jpg" width="64" height="64"/><h2>
-                            moltenisfrozen
-                        </h2></a
-                    >
-
-                    <a class="social" href="https://frozencore.itch.io/">
-                        <img src="/logos/itchio.svg" width="64" height="64"/><h2>
-                            frozencore
-                        </h2></a
-                    >
+        <div id="page-thinner">
+            <Header page="about"/>
+            <div class="sidebar-divider">
+            <div class="page-container">
                 
             </div>
+
+            <SideBar current={2}/>
         </div>
+
+   
     </body>
 </html>
 

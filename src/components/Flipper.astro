@@ -1,0 +1,31 @@
+---
+var { content, header } = Astro.props
+---
+
+<div class="flipper-container">
+    <a class="flipper-icon left"><img src="/icons/chevron_backward.svg"></a>
+    <div class="flipper-center">
+        <h1 class="bokor">{header}</h1>
+        <p class="bokor flipper-content">{content}</p>
+    </div>
+    <a class="flipper-icon right"><img src="/icons/chevron_forward.svg"></a>
+</div>
+
+<script>
+
+var left_button = document.querySelector("a.flipper-icon.left")
+
+var right_button = document.querySelector("a.flipper-icon.right")
+
+left_button.addEventListener("click", previous)
+right_button.addEventListener("click", next)
+
+function previous() {
+    console.log("Todo: code previous page")
+}
+
+function next() {
+    console.log("Todo: code the next page of this")
+}
+
+</script>
