@@ -92,6 +92,44 @@ underline::after, .underline::after {
     border-radius: 25px;
 }
 
+.social-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.social-box {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--secondary);
+    border: var(--secondary) 2px solid;
+    transition: .2s ease-in-out all;
+}
+
+.social-box > * {
+    transition: .2s ease-in-out all;
+}
+
+
+.social-box:hover {
+    background-color: var(--primary);
+    border: var(--primary) 2px solid;
+    transform: translateY(-2px);
+}
+
+
+.gradient-text, gra {
+    background-image: linear-gradient(to right, var(--accent), var(--primary));
+    color: transparent;
+    background-clip: text;
+}
+
 .navitem {
     margin-top: 10px;
     margin-bottom: 10px;

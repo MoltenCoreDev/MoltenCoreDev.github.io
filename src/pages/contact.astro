@@ -1,0 +1,40 @@
+---
+import "../styles/global.css";
+import HeadContent from "../components/HeadContent.astro";
+import Flipper from "../components/Flipper.astro";
+import SideBar from "../components/SideBar.astro"
+import Header from "../components/Header.astro";
+//const posts = await Astro.glob("./posts/*.md*")
+---
+
+<html lang="en">
+	<HeadContent title="mihao.pl" />
+	<body>
+		<div id="page-thinner">
+		<Header page="contact"/>
+		<div class="sidebar-divider">
+		<div class="page-container">
+			<div class="social-container">
+				<a href="https://discord.com/users/430466586558726181" class="social-box">
+					<img src="/logos/discord-mark-white.svg" width="64"/>
+					<h1>Discord</h1>
+				</a>
+				<a class="social-box" href="https://onlypixels.itch.io/">
+					<img src="/logos/itchio-textless-white.svg" width="64"/>
+					<h1>OnlyPixels</h1>
+				</a>
+				<a href="https://frozencore.itch.io/" class="social-box">
+					<img src="/logos/itchio-textless-white.svg" width="64"/>
+					<h1>Itch.io</h1>
+				</a>
+				<a href="mailto:molters.tv@gmail.com" class="social-box">
+					<img src="/icons/mail-white.svg" width="64"/>
+					<h1>E-Mail</h1>
+				</a>
+			</div>
+		</div>
+		<SideBar current={3}/>
+	</div>
+</div>
+	</body>
+</html>
