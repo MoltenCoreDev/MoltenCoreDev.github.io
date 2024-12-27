@@ -2,7 +2,7 @@
 ---
 
 <a id="song_link" class="container lastfm">
-    <img id="song_cover" style="margin: 10px;" height="128" width="128"/>
+    <img id="song_cover" class="hidden" style="margin: 10px;" height="128" width="128"/>
     <div class="np_data">
         <h4 id="song_noworlast">Last played</h4>
         <h1><b id="song_title" class="acc">Last.fm is loading</b></h1>
@@ -29,10 +29,12 @@ function formatName(title) {
 
 document.getElementById("song_noworlast").innerHTML= np["@attr"]?.nowplaying ? "I'm currently listening to" : "Last thing I listened to was"
 
-
+console.log(np)
+console.log(np.image[2]["#text"])
+console.log(np.image[2]["#text"] == "")
 document.querySelector("#song_link").setAttribute("href", np.url)
-if (np.url == "") {
-    document.querySelector("#song_link").classList.add("hidden")
+if (np.image[2]["#text"] != "") {
+    document.querySelector("#song_cover").classList.remove("hidden")
 }
 document.querySelector("#song_title").innerHTML = formatName(np.name)
 document.querySelector("#song_artist").innerHTML = `by <acc>${np.artist["#text"]}</acc>`

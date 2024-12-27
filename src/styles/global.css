@@ -227,6 +227,7 @@ underline::after, .underline::after {
     #hamburger-menu {
         display: block;
     }
+
 }
 
 .link {
@@ -252,9 +253,16 @@ underline::after, .underline::after {
 
 .container.lastfm {
     flex-direction: row;
+    height: auto;
 }
+#song_title {
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
 .container.friend-list {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -270,13 +278,14 @@ underline::after, .underline::after {
     background-color: var(--secondary);
     border-radius: 10px;
     flex-direction: column;
+    
 }
 
 .np_data {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    height: 128px;
+    min-height: 128px;
 }
 
 .np_data > * {
