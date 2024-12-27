@@ -3,5 +3,24 @@ var { page } = Astro.props
 ---
 
 <div class="header-container">
-    <div><a class="home-text aunderline left text-transition">mihao.pl<acc>/{page}</acc></a></div>
+    <a class="home-text aunderline left text-transition">mihao.pl<acc>/{page}</acc></a>
+    <button id="hamburger-menu" tabindex="0"><img width="64" src="/icons/hbmenu.svg"/></button>
+
 </div>
+
+<script>
+
+var hbmenu = document.getElementById("hamburger-menu")
+var sidebar = document.getElementById("sidebar")
+hbmenu.addEventListener("click", () => {
+    sidebar.classList.toggle("sidebar-hidden")
+    if (sidebar.classList.contains("sidebar-hidden")) {
+        hbmenu.ariaExpanded = "false"
+        hbmenu.classList.remove("expanded")
+    } else {
+        hbmenu.ariaExpanded = "true"
+        hbmenu.classList.add("expanded")
+    }
+})
+
+</script>

@@ -1,30 +1,41 @@
 ---
 ---
 
-<!-- border-radius: 10px; -->
-<a id="song_link" class="container">
+<a id="song_link" class="container lastfm">
     <img id="song_cover" style="margin: 10px;" height="128" width="128"/>
     <div class="np_data">
         <h4 id="song_noworlast">Last played</h4>
-        <h3><b id="song_title">Last.fm is loading</b></h3>
-        <h5 id="song_album">Last.fm is loading</h5>
-        <h4 id="song_artist">Last.fm is loading</h4>
+        <h1><b id="song_title" class="acc">Last.fm is loading</b></h1>
+        <h3 id="song_artist">Last.fm is loading</h3>
     </div>
 </a>
 
 <script>
+
+
 const apiKey = "a5b7b04fa4ed74446ad0f88d3b6f42d6"
 
 const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=moltenisfrozen&api_key=${apiKey}&nowplaying="true"&limit=1&format=json`)
 const data = await response.json()
 const np = data.recenttracks.track[0]
 
-document.getElementById("song_noworlast").innerHTML= np["@attr"]?.nowplaying ? "Currently listening to" : "Last thing i listened to was"
+function formatName(title) {
+    if (title.length > 49) {
+        return title.substring(0, 50) + "..."
+    } else {
+        return title
+    }
+}
 
-document.querySelector("#song_link").setAttribute("href", np.url) 
-document.querySelector("#song_title").innerHTML = np.name
-document.querySelector("#song_artist").innerHTML = np.artist["#text"]
-document.querySelector("#song_album").innerHTML = np.album["#text"]
+document.getElementById("song_noworlast").innerHTML= np["@attr"]?.nowplaying ? "I'm currently listening to" : "Last thing I listened to was"
+
+
+document.querySelector("#song_link").setAttribute("href", np.url)
+if (np.url == "") {
+    document.querySelector("#song_link").classList.add("hidden")
+}
+document.querySelector("#song_title").innerHTML = formatName(np.name)
+document.querySelector("#song_artist").innerHTML = `by <acc>${np.artist["#text"]}</acc>`
 document.querySelector("#song_cover").setAttribute("src", np.image[2]["#text"])
 document.querySelector("#song_cover").setAttribute("alt", `Album cover of ${np.album["#text"]} by ${np.artist["#text"]}`)
 </script>

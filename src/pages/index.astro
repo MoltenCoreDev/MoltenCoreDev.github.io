@@ -4,6 +4,7 @@ import HeadContent from "../components/HeadContent.astro";
 import Flipper from "../components/Flipper.astro";
 import SideBar from "../components/SideBar.astro"
 import Header from "../components/Header.astro";
+import LastFM from "../components/LastFM.astro";
 //const posts = await Astro.glob("./posts/*.md*")
 ---
 
@@ -14,13 +15,11 @@ import Header from "../components/Header.astro";
 		<Header page=""/>
 		<div class="sidebar-divider">
 		<div class="page-container">
-			<h1>Hi! I'm <gra>Mihao</gra></h1>
+			<h1 class="no-top-margin">Hi! I'm <gra>Mihao</gra></h1>
 			<h2>I make <acc>games</acc>! I make <acc>music</acc> for them! I make the 3d models!<br/>
 			Well... That's a bit of stuff. But the best part is <acc>creating</acc> in general!<br/>
 			I love taking the lead role on a project and I always try to make the most of the resources I have!</h2>
-			<div class="divider"/>
-			<h1>Some of my work:</h1>
-			<Flipper header="ElementalRift" content="Game"/>
+			<LastFM/>
 		</div>
 		<SideBar current={0}/>
 	</div>

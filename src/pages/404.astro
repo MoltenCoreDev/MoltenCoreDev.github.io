@@ -1,27 +1,28 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
 import HeadContent from '../components/HeadContent.astro';
+import SideBar from "../components/SideBar.astro";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
     <HeadContent title="404 Error!"/>
     <body>
-        <div class="content-container">
-            <div class="header">
-                <h1>Hey! this is awkward...</h1>
-                <p>You were never supposed to see this</p>
-                <h2>404! Page not found,<br>initializing recovery function in: <h1 id="countdown">3</h1></h2>
-                <h3 id="notice"></h3>
+        <div id="page-thinner">
+            <Header page="about"/>
+            <div class="sidebar-divider">
+            <div class="page-container">
+                    <div class="header">
+                        <h1>Hey! this is awkward...</h1>
+                        <p>You were never supposed to see this</p>
+                    </div>
             </div>
+
+            <SideBar current={2}/>
         </div>
+
         <script>
-            let cd = document.querySelector("#countdown")
-            let notice = document.querySelector("#notice")
-            setTimeout(() => { cd.innerHTML = "2"}, 2000)
-            setTimeout(() => { cd.innerHTML = "1"}, 3000)
-            setTimeout(() => { cd.innerHTML = "0"}, 4000)
-            setTimeout(() => { window.location.href = "/"; cd.innerHTML = `Redirected!`; notice.innerHTML = `If you didn't get redirected click <a href="/"><acc>here</acc></a>` }, 4500)
+            setTimeout(() => { window.location.href = "/"; }, 2000)
         </script>
     </body>
 </html>
