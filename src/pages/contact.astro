@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+import HeadContent from "../components/HeadContent.astro";
+import Flipper from "../components/Flipper.astro";
+import SideBar from "../components/SideBar.astro"
+import Header from "../components/Header.astro";
+//const posts = await Astro.glob("./posts/*.md*")
+---
+
+<html lang="en">
+	<HeadContent title="mihao.pl" />
+	<body>
+		<div id="page-thinner">
+		<Header page="contact"/>
+		<div class="sidebar-divider">
+		<div class="page-container">
+			<h1>Feel free to contact me on any of these platforms!<br/>I will most likely be the quickest to respond by e-mail or discord though.</h1>
+			<div class="social-container">
+				<a href="https://discord.com/users/430466586558726181" class="social-box">
+					<img src="/logos/discord-mark-white.svg" width="64"/>
+					<h1>moltenfrozen</h1>
+				</a>
+				<a href="mailto:molters.tv@gmail.com" class="social-box">
+					<img src="/icons/mail-white.svg" width="64"/>
+					<h1>molters.tv@gmail.com</h1>
+				</a>
+				<a class="social-box" href="https://onlypixels.itch.io/">
+					<img src="/logos/itchio-textless-white.svg" width="64"/>
+					<h1>onlypixels</h1>
+				</a>
+				<a href="https://frozencore.itch.io/" class="social-box">
+					<img src="/logos/itchio-textless-white.svg" width="64"/>
+					<h1>frozencore</h1>
+				</a>
+				<a href="https://github.com/MoltenCoreDev" class="social-box">
+					<img src="/logos/github-mark-white.svg" width="64"/>
+					<h1>MoltenCoreDev</h1>
+				</a>
+				
+			</div>
+		</div>
+		<SideBar current={3}/>
+	</div>
+</div>
+	</body>
+</html>

@@ -1,35 +1,37 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
 import MiniButton from "../components/MiniButton.astro";
 import HeadContent from '../components/HeadContent.astro';
+import SideBar from "../components/SideBar.astro";
+import Header from "../components/Header.astro";
 ---
-
 <html lang="en">
-    <HeadContent title="Michał's friends"/>
-    <body>
-        <Navigation />
-        <div class="content-container">
-            <div class="container np_data">
-                <h1>Friends</h1>
-                <p>
-                    One of the most important thing in life, internet or not a friend is a friend.<br>
-                    <i><acc><a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/watch?v=F4kcczygOcw"><acc>Hug all your friends, and let them know, you're not letting go</a></acc> - Cavetown</i>
-                </p>
-            </div>
+	<HeadContent title="mihao.pl" />
+	<body>
+		<div id="page-thinner">
+		<Header page="friends"/>
+		<div class="sidebar-divider">
+		<div class="page-container">
+            <h1 class="no-top-margin">
+                One of the most important thing in life, internet or not, is a friend.<br>
+                <i><a class="acc link" target="_blank" rel="nofollow noopener" href="https://www.youtube.com/watch?v=F4kcczygOcw"><acc>Hug all your friends, and let them know, you're not letting go</a></i>
+            </h1>
             <div class="container friend-list">
-                <MiniButton href="https://twitter.com/KARYNQU_" src="/88x31/karynqu.png" alt="with KARYNQU written in a stepped gradient using the aroace flag colours with four allomantic symbols (from the mistborn book series) with mist in the background"/>
-                <MiniButton href="https://alyxia.dev" src="/88x31/alyxia.png" alt="with alyxia written in cyan on a black background with stars"/>
+                <MiniButton href="#" src="/88x31/karynqu.png" alt="with KARYNQU written in a stepped gradient using the aroace flag colours with four allomantic symbols (from the mistborn book series) with mist in the background"/>
                 <MiniButton href="https://dextheexplorer.github.io/" src="/88x31/dex.gif" alt="showing dex's character on the left and titles appearing and dissapering saying: DTE; Dex; Go undercover."/>
-                <MiniButton href="https://github.com/mugman174" src="/88x31/mugman.png" alt="88x31 of mugman174"/>
+                <MiniButton href="https://alyxia.dev" src="/88x31/alyxia.png" alt="with alyxia written in cyan on a black background with stars"/>
                 <MiniButton href="https://sakooooo.github.io/" src="/88x31/sako.png" alt="88x31 of Sako's oc with SaKo written next to it on the right"/>
+                <MiniButton href="https://github.com/mugman174" src="/88x31/mugman.png" alt="88x31 of mugman174"/>
                 <MiniButton href="https://catvibers.me/" src="/88x31/dank.png" alt="88x31 of a ciggarte on what looks to be a Venus flytrap wearing a cap, to the right wavy text saying 'Damk'"/>
             </div>
-            <div class="container np_data">
-                <p>You are not on here and you are my friend? or want to be? <a href="/about" class="link">Message me!</a> so i can put you on the list.</p>
+            <div class="container">
+                <h2 class="no-top-margin no-bot-margin">You are not on here and you are my friend? or want to be? <a href="/about" class="acc link">Message me!</a> so I can include you in this list.</h2>
                 <p>Want to add me on your site? Feel free to do so! Here is my own 88x31 tag.</p>
                 <MiniButton href="https://moltencoredev.github.io" src="/88x31/me.png" alt="88x31 with the caption molten is frozen styled to the words. A green sign saying go next to it, pointing to a happy console creature called AB-1."></MiniButton>
             </div>
-        </div>
-    </body>
+		</div>
+		<SideBar current={4}/>
+	</div>
+</div>
+</body>
 </html>

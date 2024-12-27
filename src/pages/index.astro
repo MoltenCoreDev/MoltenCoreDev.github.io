@@ -1,35 +1,28 @@
 ---
-import '../styles/global.css'
-import HeadContent from '../components/HeadContent.astro';
-import Navigation from '../components/Navigation.astro'
-import MiniButton from "../components/MiniButton.astro";
-import PostBox from '../components/PostBox.astro';
-import LastFM from '../components/LastFM.astro';
+import "../styles/global.css";
+import HeadContent from "../components/HeadContent.astro";
+import Flipper from "../components/Flipper.astro";
+import SideBar from "../components/SideBar.astro"
+import Header from "../components/Header.astro";
+import LastFM from "../components/LastFM.astro";
 //const posts = await Astro.glob("./posts/*.md*")
 ---
 
 <html lang="en">
-	<HeadContent title="Michał's Blog"/>
+	<HeadContent title="mihao.pl" />
 	<body>
-		<Navigation></Navigation>
-		<div class="content-container">
-			<div class="header">
-				<h1>Hi, i'm <i><acc>Michał</acc></i></h1>
-				<p>And you are right here on my site!<br>
-					I'm glad you found it, take a look around, listen to stuff, read stuff, play stuff!
-				</p>
-			</div> 
-			<!-- <div class="container">
-				{posts.map((post) => (
-					<PostBox title={post.frontmatter.title}
-					imageUrl={post.frontmatter.image.url}
-					href={post.url}
-					description={post.frontmatter.description} />
-				))}
-			</div> -->
-			<LastFM />
-			
+		<div id="page-thinner">
+		<Header page=""/>
+		<div class="sidebar-divider">
+		<div class="page-container">
+			<h1 class="no-top-margin">Hi! I'm <gra>Mihao</gra></h1>
+			<h2>I make <acc>games</acc>! I make <acc>music</acc> for them! I make the 3d models!<br/>
+			Well... That's a bit of stuff. But the best part is <acc>creating</acc> in general!<br/>
+			I love taking the lead role on a project and I always try to make the most of the resources I have!</h2>
+			<LastFM/>
 		</div>
-		
+		<SideBar current={0}/>
+	</div>
+</div>
 	</body>
 </html>

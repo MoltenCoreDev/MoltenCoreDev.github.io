@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+import PostBox from "../components/PostBox.astro"
+import SideBar from "../components/SideBar.astro";
+import Header from "../components/Header.astro";
+import HeadContent from '../components/HeadContent.astro';
+---
+
+<html lang="en">
+    <HeadContent title="Portfolio"/>
+    <body>
+        <div id="page-thinner">
+            <Header page="work"/>
+            <div class="sidebar-divider">
+            <div class="page-container">
+                <div class="container">
+                    <h1>This page is still being worked on!</h1>
+                    <p>Sorry!</p>
+                </div>
+            </div>
+            <SideBar current={1}/>
+        </div>
+
+        </div>
+    </body>
+</html>

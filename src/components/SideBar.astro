@@ -1,0 +1,13 @@
+---
+var { current } = Astro.props
+---
+<div id="sidebar" class="sidebar-hidden">
+    <div class="navigation">
+        <a href="/"><h1 class=`navitem ${current == 0 ? "underline acc" : "aunderline"} left`>Home</h1></a>
+        <a href="/work"><h1 class=`navitem ${current == 1 ? "underline acc" : "aunderline"} left`>Work</h1></a>
+        <a href="/about"><h1 class=`navitem ${current == 2 ? "underline acc" : "aunderline"} left`>About Me</h1></a>
+        <a href="/contact"><h1 class=`navitem ${current == 3 ? "underline acc" : "aunderline"} left`>Contact</h1></a>
+        <a href="/friends"><h1 class=`navitem ${current == 4 ? "underline acc" : "aunderline"} left`>Friends</h1></a>
+
+    </div>
+</div>
